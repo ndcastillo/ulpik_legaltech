@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1B1324;
+}
+
+.legaltech {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.legaltech .presentacion {
+  line-height: 150%;
+}
+.legaltech .presentacion span {
+  font-size: 20px;
+}
+.legaltech .presentacion h3 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.legaltech .presentacion .clave {
+  color: #FF5433;
+}
+.legaltech .presentacion .titulo {
+  display: block;
+  width: fit-content;
+  border-bottom: 8px solid #FF5433;
+}
+.legaltech .descripcion {
+  font-size: 20px;
+  padding: 20px;
+  height: auto;
+  max-width: 500px;
+}
+
+/*# sourceMappingURL=style.css.map */
