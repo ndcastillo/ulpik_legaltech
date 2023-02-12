@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+.objetivo{
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: #1B1324;
+    /* background-color: blue; */
+    width: 300px;
+  display: flex;
+  flex-direction: column;  
+}
+
+.objetivo p{
+    /* background-color: red; */
+    display: block;
+    margin: 0;
+}
+
+.first-line{
+    text-align: right;   
+}
+
+
+#animation-letters{
+    text-align: center;
+    height: 45px;
+    line-height: 100%;
+    font-size: 45px;
+    color: #FF5433;
+}
+
+.third-line{
+    text-align: right;
+}

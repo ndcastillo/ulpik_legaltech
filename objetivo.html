@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./objetivo.css">
+</head>
+<body>
+    <div class="objetivo">
+        <p class="first-line">Realizar una</p>
+        <p class="second-line">Transformación</p>
+        <p id="animation-letters"></p>
+        <p class="third-line">de los Abogados</p>
+        <p class="fourth-line">en latinoamérica.</p>
+    </div>
+
+    <script>
+        
+        let eleRef = 'animation-letters';
+        let node = document.getElementById(eleRef);
+        
+        async function typeSentence(sentence, eleRef, delay = 200) {
+            const letters = sentence.split("");
+            let i = 0;
+
+            while(i < letters.length) {
+                await waitForMs(delay);
+                node.append(letters[i]);
+                i++
+            }
+
+        }
+
+        async function deleteSentence(sentence,eleRef) {
+            const letters = sentence.split("");
+            let i = 0;
+
+            while(letters.length > 0) {
+                await waitForMs(100);
+                letters.pop();
+                node.innerHTML = letters.join("");
+            }
+
+        }
+
+
+        function waitForMs(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
+
+        const carouselText = [
+        {text: "Digital", color: "red"},
+        {text: "de Visión", color: "orange"},
+        // {text: "Visión", color: "yellow"}
+        ]
+
+        async function carousel(carouselList, eleRef) {
+            var i = 0;
+            while(true) {
+                updateFontColor(eleRef, carouselList[i].color)
+                await typeSentence(carouselList[i].text, eleRef);
+                await waitForMs(1500);
+                await deleteSentence(carouselList[i].text,eleRef);
+                await waitForMs(500);
+                i++
+                if(i >= carouselList.length) {i = 0;}
+            }
+        }
+
+        
+            
+        function updateFontColor(eleRef, color) {
+            let node = document.getElementById(eleRef);
+            // node.css('color', color);
+        }
+        ;
+
+        carousel(carouselText)
+        
+    </script>
+</body>
+</html>

@@ -21,10 +21,17 @@
   .dinamica-curso{
     display: flex;
     font-family: "Poppins", sans-serif;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+
+  .tabla-dinamica{
+    margin-top: 20px;
+    /* background-color: blue; */
   }
 
   .modulo-dinamica{
@@ -49,4 +56,16 @@
   .imagen-descripcion{
     width: 100%;
     text-align: center;
+  }
+
+  .video-presentacion{
+    /* display: block; */
+    /* margin: 0 auto; */
+    margin-top: 30px;
+  }
+
+  video{
+    /* width: 300px; */
+    max-width: 300px;
+    border-radius: 10px;
   }
