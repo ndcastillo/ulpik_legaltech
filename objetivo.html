@@ -9,11 +9,15 @@
 </head>
 <body>
     <div class="objetivo">
-        <p class="first-line">Realizar una</p>
-        <p class="second-line">Transformación</p>
-        <p id="animation-letters"></p>
-        <p class="third-line">de los Abogados</p>
-        <p class="fourth-line">en latinoamérica.</p>
+        <p >Obten una</p>
+        <p >Transformación</p>
+        <div style="display:flex; justify-content: center; align-items: center;">
+            <span id="animation-letters"></span>
+            <span class="prompt">|</span>
+        </div>
+        
+        <p >de tu estudio jurídico</p>
+        <!-- <p class="fourth-line">jurídico</p> -->
     </div>
 
     <script>
@@ -53,7 +57,7 @@
         const carouselText = [
         {text: "Digital", color: "red"},
         {text: "de Visión", color: "orange"},
-        // {text: "Visión", color: "yellow"}
+        {text: "Pragmática", color: "yellow"}
         ]
 
         async function carousel(carouselList, eleRef) {
